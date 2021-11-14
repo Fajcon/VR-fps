@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5278716678494682866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5278716678494682864}
+  - component: {fileID: 5278716678494682865}
+  - component: {fileID: 3482035328217078760}
+  m_Layer: 0
+  m_Name: Left Hand Presence
+  m_TagString: hand
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5278716678494682864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5278716678494682866}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5278716678494682865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5278716678494682866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f7378978647294d858e5b653633d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showController: 0
+  controllerCharacteristics: 320
+  controllerPrefabs: []
+  inputSource: 5
+  gunScript: {fileID: 3482035328217078760}
+  handModelPrefab: {fileID: 1986980407025714457, guid: a01940a1bdbbb644d85ea6e247188b35, type: 3}
+  menuOn: 0
+--- !u!114 &3482035328217078760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5278716678494682866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73aa9be197006ba4b8d6a3456e983b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
+  bullet: {fileID: 6358185052326528145, guid: 7389a9b306c8ad2438232a7309772d91, type: 3}
+  barrel: {fileID: 0}
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: fb798420b1646694d871fc01c9254b3b, type: 3}
