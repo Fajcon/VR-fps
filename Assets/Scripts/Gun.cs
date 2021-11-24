@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
@@ -9,6 +10,7 @@ public class Gun : MonoBehaviour
 
    private Color startColor = Color.red;
    private Color endColor = Color.white;
+ 
    public void Fire(GameObject barrel,AudioSource audioSource, GameObject target)
    {
       GameObject spawnBullet = Instantiate(bullet, barrel.transform.position, barrel.transform.rotation);
