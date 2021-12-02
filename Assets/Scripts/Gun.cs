@@ -19,7 +19,7 @@ public class Gun : MonoBehaviour
       Destroy(spawnBullet, 2);
       if (target != null)
       {
-         Destroy(target);
+         target.GetComponent<Target>().DestroyTarget();
       }
    }
 }
