@@ -56,7 +56,7 @@ public class HandPresence : MonoBehaviour
                 gunScript.Fire(barrel, audioSource, target);
                 triggerReleased = false;
             }
-            else if (triggerValue < 0.3)
+            else if (triggerValue < 0.3f)
             {
                 triggerReleased = true;
             }
@@ -74,7 +74,8 @@ public class HandPresence : MonoBehaviour
     {
         Shoot();
         LineRenderer lineRenderer = barrel.GetComponent<LineRenderer>();
-        int layerMask = 1 << 9;
+        int layerMask = 1 << 2;
+        layerMask = ~layerMask;
 
         RaycastHit hit;
 

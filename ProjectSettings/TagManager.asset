@@ -6,6 +6,7 @@ TagManager:
   tags:
   - hand
   - Obstacle
+  - Target
   layers:
   - Default
   - TransparentFX

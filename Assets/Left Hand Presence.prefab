@@ -49,7 +49,8 @@ MonoBehaviour:
   controllerPrefabs: []
   inputSource: 5
   gunScript: {fileID: 3482035328217078760}
-  handModelPrefab: {fileID: 1986980407025714457, guid: a01940a1bdbbb644d85ea6e247188b35, type: 3}
+  handModelPrefab: {fileID: 1986980407025714457, guid: a01940a1bdbbb644d85ea6e247188b35,
+    type: 3}
   menuOn: 0
 --- !u!114 &3482035328217078760
 MonoBehaviour:
@@ -65,6 +66,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 40
   bullet: {fileID: 6358185052326528145, guid: 7389a9b306c8ad2438232a7309772d91, type: 3}
-  barrel: {fileID: 0}
-  audioSource: {fileID: 0}
+  particles: {fileID: 5457777265413756243, guid: a6dc9251cd44b0c4d99d10945568be75,
+    type: 3}
   audioClip: {fileID: 8300000, guid: fb798420b1646694d871fc01c9254b3b, type: 3}
