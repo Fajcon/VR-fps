@@ -8,6 +8,7 @@ public class TargetSpawner : MonoBehaviour
     
     public GameObject targetPrefab;
 
+    public int speed;
     public int minX;
     public int maxX;
 
@@ -41,6 +42,8 @@ public class TargetSpawner : MonoBehaviour
             position.y += Random.Range(0.5f, maxY);
             var targetObject = Instantiate(targetPrefab, position, Quaternion.identity);
             targetObject.GetComponent<Target>().targetSpawner = this;
+            targetObject.GetComponent<Target>().speed = speed;
+
         }
     }
 }

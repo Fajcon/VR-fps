@@ -56,7 +56,7 @@ public class HandPresence : MonoBehaviour
                 gunScript.Fire(barrel, audioSource, target);
                 triggerReleased = false;
             }
-            else if (triggerValue < 0.3f)
+            else if (triggerValue < 0.7f)
             {
                 triggerReleased = true;
             }

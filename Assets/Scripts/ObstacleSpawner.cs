@@ -18,9 +18,12 @@ public class ObstacleSpawner : MonoBehaviour
     public float spawnPeriod;
 
     public float changeSpeedPeriod;
+
+    public float decreasePeriod;
     
     private float elapsed = 0f;
     private float elapsedTimeForChangeSpeed = 0f;
+    private float elapsedTimeForChangePeriod = 0f;
 
 // Start is called before the first frame update
     void Start()
@@ -38,6 +41,7 @@ public class ObstacleSpawner : MonoBehaviour
     {
         elapsed += Time.deltaTime;
         elapsedTimeForChangeSpeed += Time.deltaTime;
+        elapsedTimeForChangePeriod += Time.deltaTime;
 
         if (elapsedTimeForChangeSpeed >= changeSpeedPeriod)
         {
@@ -54,6 +58,17 @@ public class ObstacleSpawner : MonoBehaviour
             position.y += obstaclePrefabs[index].transform.position.y;
             var targetObject = Instantiate(obstaclePrefabs[index], position, Quaternion.identity);
             targetObject.GetComponent<Obstacle>().speed = speed;
+        }
+
+        if (spawnPeriod >= 0.1f && elapsedTimeForChangePeriod >= decreasePeriod)
+        {
+            spawnPeriod -= 0.5f;
+            if (spawnPeriod < 0.1f)
+            {
+                spawnPeriod = 0.1f;
+            }
+            elapsedTimeForChangePeriod = elapsedTimeForChangePeriod % spawnPeriod;
+
         }
     }
 }
