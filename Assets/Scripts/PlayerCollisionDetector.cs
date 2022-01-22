@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,9 +27,8 @@ public class PlayerCollisionDetector : MonoBehaviour
         //Check for a match with the specific tag on any GameObject that collides with your GameObject
         if (other.tag == "Obstacle")
         {
-            SceneManager.LoadScene ("MenuScene");
-            // pointsText.text = "GAME OVER";
-            Debug.Log("Game Over");
+            GameData.endTime = DateTime.UtcNow;
+            SceneManager.LoadScene ("GameOverScene");
         }
     }
     

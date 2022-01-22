@@ -60,12 +60,12 @@ public class ObstacleSpawner : MonoBehaviour
             targetObject.GetComponent<Obstacle>().speed = speed;
         }
 
-        if (spawnPeriod >= 0.1f && elapsedTimeForChangePeriod >= decreasePeriod)
+        if (spawnPeriod >= 1f && elapsedTimeForChangePeriod >= decreasePeriod)
         {
             spawnPeriod -= 0.5f;
-            if (spawnPeriod < 0.1f)
+            if (spawnPeriod < 0.5f)
             {
-                spawnPeriod = 0.1f;
+                spawnPeriod = 0.5f;
             }
             elapsedTimeForChangePeriod = elapsedTimeForChangePeriod % spawnPeriod;
 

@@ -51,12 +51,12 @@ public class HandPresence : MonoBehaviour
     {
         if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
         {
-            if (triggerReleased && triggerValue > 0.5f)
+            if (triggerReleased && triggerValue > 0.7f)
             {
                 gunScript.Fire(barrel, audioSource, target);
                 triggerReleased = false;
             }
-            else if (triggerValue < 0.7f)
+            else if (triggerValue < 0.5f)
             {
                 triggerReleased = true;
             }

@@ -19,14 +19,20 @@ public class Gun : MonoBehaviour
       spawnBullet.GetComponent<Rigidbody>().velocity = speed * barrel.transform.forward;
       audioSource.PlayOneShot(audioClip);
       Destroy(spawnBullet, 2);
+      GameData.shots++;
       if (target != null && target.name == "Start_btn")
       {
          SceneManager.LoadScene ("SampleScene");
+         GameData.startTime = DateTime.UtcNow;
+         GameData.accurateShots = 0;
+         GameData.shots = 0;
       } else if (target != null && target.CompareTag("Target"))
       {
+         GameData.accurateShots++;
          target.GetComponent<Target>().DestroyTarget();
          GameObject spawnParticles = Instantiate(particles, target.transform.position, target.transform.rotation);
          Destroy(spawnParticles, 2);
       }
+      
    }
 }
